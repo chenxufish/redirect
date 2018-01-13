@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
     <title>1建刷分</title>
-   <style type="text/css">
+    <style type="text/css">
         * {
             margin: 0;
             padding: 0;
@@ -19,8 +19,7 @@
             height: auto;
         }
 
-/*        .weixin-tip {
-            display: none;
+        .weixin-tip {
             position: fixed;
             left: 0;
             top: 0;
@@ -36,7 +35,7 @@
             text-align: center;
             margin-top: 10%;
             padding: 0 5%;
-        }*/
+        }
     </style>
 </head>
 
@@ -48,6 +47,9 @@
 
 <script language="javascript" type="text/javascript">
 
+    var winHeight = $(window).height();
+
+
     function is_weixn() {
 
         var ua = navigator.userAgent.toLowerCase();
@@ -58,9 +60,13 @@
         }
     }
 
-     $(".weixin-tip").show();
+    if (is_weixn()) {
+        $(".weixin-tip").css("height", winHeight);
+        $(".weixin-tip").show();
+    } else {
+        window.location.href = "http://stoneifish.me/testpagee/";
+    }
 
-       /* window.location.href = "http://stoneifish.me/testpagee/";*/
 
 </script>
 
