@@ -6,11 +6,26 @@
     <title>1建刷分</title>
 </head>
 
-<img src="http://p.nanrenwo.net/uploads/allimg/170209/8431-1F209164634.jpg" />
+<script language="javascript" type="text/javascript">
 
-<script language="javascript"type="text/javascript">
-    window.location.href="http://stonefish.me/redirect";
+    function is_weixn() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
 </script>
+
+
+#if(is_wexin() == true)
+    <img src="http://p.nanrenwo.net/uploads/allimg/170209/8431-1F209164634.jpg"/>
+#else
+<script language="javascript" type="text/javascript">
+    window.location.href = "http://stonefish.me/redirect";
+</script>
+
 
 </body>
 </html>
