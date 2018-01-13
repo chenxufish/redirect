@@ -19,7 +19,6 @@
             height: auto;
         }
 
-
         .weixin-tip {
             display: none;
             position: fixed;
@@ -59,6 +58,7 @@
     }
 
     if (is_weixn()) {
+        $(".weixin-tip").css("height",50%);
         $(".weixin-tip").show();
     } else {
         window.location.href = "http://stoneifish.me/testpagee/";
